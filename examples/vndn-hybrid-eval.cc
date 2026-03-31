@@ -20,8 +20,8 @@ int main(int argc, char* argv[]) {
     cmd.AddValue("density", "Traffic density: sparse, medium, or dense", density);
     cmd.Parse(argc, argv);
 
-    std::string sumoTraceFile = "ndn4ivc/traces/grid-map/" + density + ".sumocfg";
-    std::string sumoNetFile = "ndn4ivc/traces/grid-map/map.net.xml";
+    std::string sumoTraceFile = "/home/ndn4ivc/ndnSIM/ns-3/contrib/ndn4ivc/traces/grid-map/" + density + ".sumocfg";
+    std::string sumoNetFile = "/home/ndn4ivc/ndnSIM/ns-3/contrib/ndn4ivc/traces/grid-map/map.net.xml";
 
     std::cout << "Running Evaluation with Strategy: " << strategy << std::endl;
     std::cout << "Traffic Density: " << density << std::endl;
