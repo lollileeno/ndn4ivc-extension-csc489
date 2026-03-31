@@ -12,13 +12,19 @@
 using namespace ns3;
 
 int main(int argc, char* argv[]) {
-    std::string sumoNetFile = "contrib/ndn4ivc/traces/grid-map/map.net.xml";
-    std::string sumoTraceFile = "contrib/ndn4ivc/traces/grid-map/mobility.sumocfg";
-    std::string strategy = "/localhost/nfd/strategy/hybrid-vanet/%FD%01"; // استراتيجيتك
+   std::string density = "medium"; 
+    std::string strategy = "/localhost/nfd/strategy/hybrid-vanet/%FD%01";
 
     CommandLine cmd;
     cmd.AddValue("strategy", "Forwarding strategy to use", strategy);
+    cmd.AddValue("density", "Traffic density: sparse, medium, or dense", density);
     cmd.Parse(argc, argv);
+
+    std::string sumoTraceFile = "ndn4ivc/traces/grid-map/" + density + ".sumocfg";
+    std::string sumoNetFile = "ndn4ivc/traces/grid-map/map.net.xml";
+
+    std::cout << "Running Evaluation with Strategy: " << strategy << std::endl;
+    std::cout << "Traffic Density: " << density << std::endl;
 
     // Wireless Settings (V2X / 802.11p)
     WifiSetupHelper wifiHelper;
