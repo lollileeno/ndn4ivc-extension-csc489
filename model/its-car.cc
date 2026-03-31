@@ -95,6 +95,7 @@ ItsCar::Start ()
   ns3::Ptr<ns3::UniformRandomVariable> delay = ns3::CreateObject<ns3::UniformRandomVariable> ();
   m_scheduler.schedule (time::milliseconds (m_defaultInterval + delay->GetInteger (50.0, 200.0)),
                         [this] { SendBeaconInterest (); });
+  m_scheduler.schedule (time::seconds (3), [this] { CleanOldNeighbors (); });
 }
 
 void
