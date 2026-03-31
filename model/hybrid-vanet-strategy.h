@@ -1,8 +1,8 @@
 #ifndef NFD_DAEMON_FW_HYBRID_VANET_STRATEGY_H
 #define NFD_DAEMON_FW_HYBRID_VANET_STRATEGY_H
 
-#include "ns3/ndnSIM/NFD/daemon/fw/multicast-strategy.h"
-#include "ns3/ndnSIM/NFD/daemon/fw/retx-suppression-exponential.h"
+#include "/home/ndn4ivc/ndnSIM/ns-3/src/ndnSIM/NFD/daemon/fw/multicast-strategy.h"
+#include "/home/ndn4ivc/ndnSIM/ns-3/src/ndnSIM/NFD/daemon/fw/retx-suppression-exponential.h"
 
 namespace nfd {
 namespace fw {
