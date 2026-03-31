@@ -478,6 +478,15 @@ ItsCar::CalcTimeWindow (int window_size_in_seconds)
     return -1;
   return (int) ns3::Simulator::Now ().GetSeconds () / window_size_in_seconds;
 }
+void ItsCar::CleanOldNeighbors ()
+{
+  // clear the old neighbors table 
 
+  MYLOG_DEBUG("Cleaning neighbor table. Previous density: " << m_neighMap.size());
+  m_neighMap.clear();
+
+  // إعادة جدولة العملية
+  m_scheduler.schedule (time::seconds (3), [this] { CleanOldNeighbors (); });
+}
 } // namespace its
 } // namespace ndn
