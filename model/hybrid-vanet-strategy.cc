@@ -1,6 +1,6 @@
 #include "hybrid-vanet-strategy.hpp"
-#include "ns3/ndnSIM/NFD/daemon/fw/algorithm.hpp"
-#include "ns3/ndnSIM/NFD/daemon/common/logger.hpp"
+#include "/home/ndn4ivc/ndnSIM/ns-3/src/ndnSIM/NFD/daemon/fw/algorithm.hpp"
+#include "/home/ndn4ivc/ndnSIM/ns-3/src/ndnSIM/NFD/daemon/common/logger.hpp"
 
 namespace nfd {
 namespace fw {
