@@ -485,7 +485,7 @@ void ItsCar::CleanOldNeighbors ()
   MYLOG_DEBUG("Cleaning neighbor table. Previous density: " << m_neighMap.size());
   m_neighMap.clear();
 
-  // إعادة جدولة العملية
+  
   m_scheduler.schedule (time::seconds (3), [this] { CleanOldNeighbors (); });
 }
 } // namespace its
