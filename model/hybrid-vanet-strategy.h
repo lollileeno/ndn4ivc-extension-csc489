@@ -1,5 +1,5 @@
-#ifndef NFD_DAEMON_FW_HYBRID_VANET_STRATEGY_HPP
-#define NFD_DAEMON_FW_HYBRID_VANET_STRATEGY_HPP
+#ifndef NFD_DAEMON_FW_HYBRID_VANET_STRATEGY_H
+#define NFD_DAEMON_FW_HYBRID_VANET_STRATEGY_H
 
 #include "ns3/ndnSIM/NFD/daemon/fw/multicast-strategy.h"
 #include "ns3/ndnSIM/NFD/daemon/fw/retx-suppression-exponential.h"
@@ -32,4 +32,4 @@ static const int DENSE_THRESHOLD = 5;
 } // namespace fw
 } // namespace nfd
 
-#endif // NFD_DAEMON_FW_HYBRID_VANET_STRATEGY_HPP
+#endif // NFD_DAEMON_FW_HYBRID_VANET_STRATEGY_H
