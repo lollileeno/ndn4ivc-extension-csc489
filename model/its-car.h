@@ -65,7 +65,7 @@ private:
   int CalcTimeWindow (int window_size);
 
   void OnMsgItsValidated (const ndn::Data &data);
-
+  void CleanOldNeighbors ();
 private:
   ndn::Face m_face;
   ndn::Scheduler m_scheduler;
